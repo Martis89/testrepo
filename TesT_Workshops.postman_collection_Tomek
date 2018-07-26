@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "c58e7121-c8cd-4ec3-9090-a9b697ca40bc",
+		"name": "TesT_Workshops",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "ec3698a2-04ae-4b1e-ad30-e444252964a8",
+			"name": "https://reqres.in/api/users?page=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Get All Users"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "6e8528dd-59cc-4526-ad07-c8059fb19111",
+			"name": "https://reqres.in/api/users/2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "952116c4-15b6-45d0-a3be-407098b4a8f8",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Janet\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				},
+				"description": "Get Single User"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "b060c043-d06f-4853-ae4d-a2307e58008f",
+			"name": "https://reqres.in/api/users/?name=New&job=User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://reqres.in/api/users/?name=New&job=User",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "New"
+						},
+						{
+							"key": "job",
+							"value": "User"
+						}
+					]
+				},
+				"description": "Add User"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "d4395f17-be56-4ddf-b4e2-6105a98086a9",
+			"name": "https://reqres.in/api/users/775",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://reqres.in/api/users/775",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"775"
+					]
+				},
+				"description": "Update User"
+			},
+			"response": []
+		}
+	]
+}
