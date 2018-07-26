@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "My Collection",
+		"_postman_id": "c7969c18-1e51-4a3b-8b2f-70e364b9d020",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1",
+			"request": {
+				"url": "https://reqres.in/\n/api/users/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "2",
+			"request": {
+				"url": "https://reqres.in//api/users",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "morpheus",
+							"type": "text"
+						},
+						{
+							"key": "job",
+							"value": "leader",
+							"type": "text"
+						}
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "3",
+			"request": {
+				"url": "https://reqres.in//api/users/2",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "morpheus",
+							"type": "text"
+						},
+						{
+							"key": "job",
+							"value": "zion resident",
+							"type": "text"
+						}
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "4",
+			"request": {
+				"url": "https://reqres.in/\n/api/users/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Janet\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://reqres.in/\n/api/users/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": null
+			},
+			"response": []
+		}
+	]
+}
